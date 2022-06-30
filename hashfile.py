@@ -17,26 +17,18 @@ def hash_file(filename):
     with open(filename, 'rb') as file:
 
         choice = input("Enter (M to hash md5) or (H for sha1): ")
-        if choice == "h" or choice == "H":
+        if (choice == "h") or (choice == "H"):
             # loop till the end of the file
             chunk = 0
             while chunk != b'':
                 # read only 1024 bytes at a time
                 chunk = file.read(1024)
                 h.update(chunk)
-
-        # return the hex representation of digest
-            return h.hexdigest()
-
-        elif choice == "m" or choice == "M":
-            # loop till the end of the file
-            chunk = 0
-            while chunk != b'':
-                # read only 1024 bytes at a time
-                chunk = file.read(1024)
                 m.update(chunk)
 
         # return the hex representation of digest
+            return h.hexdigest()
+        elif (choice == "m" or choice == "M"):
             return m.hexdigest()
 
 
