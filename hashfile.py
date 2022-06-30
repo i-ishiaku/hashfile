@@ -24,11 +24,16 @@ def hash_file(filename):
                 # read only 1024 bytes at a time
                 chunk = file.read(1024)
                 h.update(chunk)
-                m.update(chunk)
 
         # return the hex representation of digest
             return h.hexdigest()
         elif (choice == "m" or choice == "M"):
+            chunk = 0
+            while chunk != b'':
+                # read only 1024 bytes at a time
+                chunk = file.read(1024)
+                m.update(chunk)
+
             return m.hexdigest()
 
 
