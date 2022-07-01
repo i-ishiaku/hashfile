@@ -1,4 +1,4 @@
-**# A program to calculate and print the hash of any given file from user
+A program to calculate and print the hash of any given file from user
 ========================================================================================================================================================================
 The hash function takes an arbitrary amount of data and returns a fixed length bit string. The output of the function is called the digest message. 
 They are widely used in cryptography for authentication purposes.
