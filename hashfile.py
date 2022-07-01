@@ -8,14 +8,11 @@ print(""""This function returns the SHA-1  and MD5 hash
 
 
 def hash_file(filename):
-
     # make a hash object
     h = hl.sha1()
     m = hl.md5()
-
     # open file for reading in binary mode
     with open(filename, 'rb') as file:
-
         choice = input("Enter (M to hash md5) or (H for sha1): ")
         chunk = 0
         while chunk != b'':
@@ -26,6 +23,7 @@ def hash_file(filename):
             if (choice == "h") or (choice == "H"):
                 # return the hex representation of digest
                 return h.hexdigest()
+
             elif (choice == "m") or (choice == "M"):
                 # return the hex representation of digest
                 return m.hexdigest()
